@@ -8,7 +8,7 @@ Follow this structure to ensure that jellyfin finds your posters and episode tit
       └── /Show Name
           ├── /Season 01
           │   └── S01E01.mkv
-          └── /Season 0  <-- (Specials go here!)
+          └── /Season 00  <-- (Specials go here!)
               └── S00E01.mkv
 ```
 Note: For TV specials, place them in a "Season 0" or "Specials" folder
