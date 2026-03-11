@@ -15,13 +15,17 @@ If you do not already have these installed. run this command:
 sudo apt-update && sudo apt-get install docker.io docker-compose -y
 
 ```
-* If you ever want to wdit the docker-compose.yml file, run `docker-compose down` from inside the jellyfin directory to remove the container and network
-* If you ever want to stop the docker container, run `docker stop jellyfin`; This is for when you don't want docker using up all your resources, and you're not editing any configuration files like
-  the docker-compose.yml
-
 After you have docker installed, you have to start the container in the jellyfin directory:
 ` sudo docker-compose up -d `
 Note: If this is your first time doing this, docker will need to download the jellyfin image.
+
+## Container Management
+* If you ever want to edit the docker-compose.yml file, run `docker-compose down` from inside the jellyfin directory to remove the container and network,
+  then run `docker-compose up -d` to rebuild the container and network
+* To temporarily stop the docker container so it doesn't hog all your resources, run `docker stop jellyfin`
+  * To start the container again, run `docker start jellyfin`
+
+
 
 ## Accessing your server
 If you are accessing your server from your host machine, then you will need to navigate to http://127.0.0.1:8096.  
@@ -40,9 +44,21 @@ Otherwise, if you are accessing your server from a different device, go to http:
   ├── docker-compose.yml
   └── README.md
 ```
-# GUI Setup
-
 ## Note:
-* When you pull clone this repository, the cache and config folders will be empty.
-* When you 
-* When you scan a library for the first time, Jellyfin pulls metadata from sources like TVDB/TMDB and drops it into the cache folder.
+When you clone this repository, the cache and config folders will be empty.  
+Once you finish the setup process on the webpage, jellyfin will automatically keep that information in the config directory.  
+When you scan a library for the first time, Jellyfin will pull metadata from sources like TVDB/TMDB and drops it into the cache folder.
+
+# GUI Setup
+1. Go to http://127.0.0.1:8096
+2. Set your Server name and preferred display language --> next
+3. Set a Username and Password --> next
+4. If you have any media
+   * Click 'Add Media Library'
+   * Set Content Type & Library name
+   * Select Folders --> /media --> path/to/media, then click Ok
+5. Click Ok --> Next
+6. Set Language & Country/Region --> Next
+7. If you aren't accessing your server from outside your private LAN, then you can uncheck the 'Allow remote conections to this server.' Otherwise keep it checked. Now click Next
+8. Click Finish and log back in again
+9. Enjoy!
