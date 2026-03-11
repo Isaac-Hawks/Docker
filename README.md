@@ -1,6 +1,6 @@
 # Jellyfin Docker Container
 This is a template for a jellyfin server that runs in a docker container
-These instructions are tailored for Ubuntu/Debian
+These instructions are designed for Ubuntu/Debian systems
 
 ## Download:
 ```bash
@@ -12,7 +12,7 @@ For this to work, you need docker + docker-compose on the device that will be ho
 
 If you do not already have these installed. run this command:
 ```bash
-sudo apt-update && sudo apt-get install docker.io docker-compose -y
+sudo apt-get update && sudo apt-get install docker.io docker-compose -y
 
 ```
 After you have docker installed, you have to start the container in the jellyfin directory:
@@ -59,6 +59,6 @@ When you scan a library for the first time, Jellyfin will pull metadata from sou
    * Select Folders --> /media --> path/to/media, then click Ok
 5. Click Ok --> Next
 6. Set Language & Country/Region --> Next
-7. If you aren't accessing your server from outside your private LAN, then you can uncheck the 'Allow remote conections to this server.' Otherwise keep it checked. Now click Next
+7. If you aren't accessing your server from outside your private LAN, then you can uncheck the 'Allow remote connections to this server.' Otherwise keep it checked. Now click Next
 8. Click Finish and log back in again
 9. Enjoy!
