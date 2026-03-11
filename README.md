@@ -8,7 +8,7 @@ It includes a docker-compose configuration and folder structure to make deployme
 - Docker Compose
 - Internet Connection (for downloading the jellyfin image and metadata)
 
-## Download:
+## Download
 ```bash
 git clone https://github.com/Isaac-Hawks/jellyfin && 
 cd jellyfin
@@ -16,14 +16,14 @@ cd jellyfin
 ## Setup/Deployment
 For this to work, you need docker + docker-compose on the device that will be hosting your Jellyfin server
 
-If you do not already have these installed. run this command:
+If you do not already have them installed, run:
 ```bash
 sudo apt-get update
 sudo apt-get install docker.io docker-compose -y
 
 ```
 After you have docker installed, you have to start the container in the jellyfin directory:
-` sudo docker-compose up -d `
+`sudo docker-compose up -d`
 Note: If this is your first time doing this, docker will need to download the jellyfin image.
 
 ## Container Management
@@ -39,7 +39,7 @@ If you are accessing your server from your host machine, then you will need to n
 Otherwise, if you are accessing your server from a different device, go to http://server-ip:8096
 * To find your server ip address, run `hostname -I | awk '{print $1}'` on the machine hosting your Jellyfin server
 
-# Folder Structure:
+# Folder Structure
 ```
 /jellyfin
   ├── /cache
@@ -52,9 +52,9 @@ Otherwise, if you are accessing your server from a different device, go to http:
   └── README.md
 ```
 ## Note:
-When you clone this repository, the cache and config folders will be empty.  
-Once you finish the setup process on the webpage, jellyfin will automatically keep that information in the config directory.  
-When you scan a library for the first time, Jellyfin will pull metadata from sources like TVDB/TMDB and drops it into the cache folder.
+When you clone this repository, the `cache` and `config` folders will be empty.  
+Once you finish the setup process on the webpage, jellyfin will automatically store it's configuration files in the `config` directory.  
+When you scan a library for the first time, Jellyfin will download metadata from sources like TVDB/TMDB and store it in the `cache` folder.
 
 # GUI Setup
 1. Go to http://127.0.0.1:8096
@@ -69,3 +69,5 @@ When you scan a library for the first time, Jellyfin will pull metadata from sou
 7. If you aren't accessing your server from outside your private LAN, then you can uncheck the 'Allow remote connections to this server.' Otherwise keep it checked. Now click Next
 8. Click Finish and log back in again
 9. Enjoy!
+
+### If you project helped you, consider giving it a ⭐ on GitHub
