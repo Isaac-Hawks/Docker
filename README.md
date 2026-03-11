@@ -1,6 +1,6 @@
 # Download:
 ```bash
-git clone https://github.com/Isaac-Hawks/jellyfin;
+git clone https://github.com/Isaac-Hawks/jellyfin &&
 cd jellyfin
 ```
 # Setup/Deployment
